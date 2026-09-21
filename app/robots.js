@@ -1,7 +1,7 @@
 export default function robots() {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://disko.pintuweb.com/sitemap.xml",
-    host: "https://disko.pintuweb.com",
+    sitemap: "https://linkinbio-disko.vercel.app/sitemap.xml",
+    host: "https://linkinbio-disko.vercel.app",
   };
 }
