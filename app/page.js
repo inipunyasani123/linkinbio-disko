@@ -13,8 +13,8 @@ export default function Home() {
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-14">
       <div className="wiggle absolute left-6 top-10 h-16 w-16 rounded-full border-[6px] border-magenta" aria-hidden="true" />
       <div className="absolute right-8 top-24 h-14 w-14 rotate-12 bg-kuning pop" aria-hidden="true" />
-      <div className="wiggle absolute bottom-16 left-10 text-5xl font-bold text-biru" aria-hidden="true">✚</div>
-      <div className="absolute -right-6 bottom-24 h-20 w-20 rounded-full bg-hijau pop" aria-hidden="true" />
+      <div className="wiggle absolute bottom-16 left-10 hidden text-5xl font-bold text-biru sm:block" aria-hidden="true">✚</div>
+      <div className="absolute -right-6 bottom-24 hidden h-20 w-20 rounded-full bg-hijau pop sm:block" aria-hidden="true" />
       <svg className="absolute left-1/2 top-6 -translate-x-1/2" width="120" height="16" aria-hidden="true"><polyline points="0,12 15,4 30,12 45,4 60,12 75,4 90,12 105,4 120,12" fill="none" stroke="#ff4fa3" strokeWidth="4" /></svg>
 
       <div className="relative z-10 w-full max-w-md">
