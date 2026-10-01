@@ -1,12 +1,12 @@
-# DISKO PANDA — Dengarkan & Tonton
+# Disko Panda — Band Funk-Disko dari Bandung
 
-Link in bio band funk-disco DISKO PANDA dari Bandung: single baru, jadwal manggung, dan merch resmi.
+Tautan Disko Panda, band funk-disko dari Bandung: tur "Panas Dingin" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7", dan booking manggung.
 
 **Demo live:** https://linkinbio-disko.vercel.app
 
 ![Tangkapan layar DISKO PANDA](public/og.jpg)
 
-> Template link-in-bio dengan persona fiktif.
+> Template link-in-bio dengan persona fiktif. Akun, klien, harga, dan jadwal hanya contoh; tautan utama menuju halaman dalam yang benar-benar ada, dan formulir tidak mengirim data.
 
 ## Konsep
 
@@ -14,7 +14,9 @@ Persona Disko Panda, band funk. Poster gig bergaya Memphis: kartu berbingkai teb
 
 ## Halaman
 
-`/`
+- `/` — poster Memphis: kepala band dengan equalizer bergerak, kartu tautan berwarna berbayang keras, bentuk-bentuk bergoyang
+- `/jadwal` — tur enam kota dengan sisa tiket, pemilih tiket & total, formulir booking
+- `/merch` — kaos dengan stok per ukuran, vinyl, totebag, stiker; tas belanja dengan pilihan ambil di konser
 
 ## Teknologi
 

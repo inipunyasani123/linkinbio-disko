@@ -8,10 +8,10 @@ const __jsonld = {"@context":"https://schema.org","@type":"MusicGroup","name":"D
 
 export const metadata = {
   metadataBase: new URL("https://linkinbio-disko.vercel.app"),
-  title: "DISKO PANDA — Dengarkan & Tonton",
-  description: "Link in bio band funk-disco DISKO PANDA dari Bandung: single baru, jadwal manggung, dan merch resmi.",
+  title: { default: "Disko Panda — Band Funk-Disko dari Bandung", template: "%s — Disko Panda" },
+  description: "Tautan Disko Panda, band funk-disko dari Bandung: tur \"Panas Dingin\" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
   applicationName: "DISKO PANDA",
-  keywords: ["link in bio", "band", "funk disco", "musik", "merch"],
+  keywords: ["band funk bandung", "jadwal konser 2026", "merch band", "vinyl 7 inci", "link in bio band"],
   authors: [{ name: "DISKO PANDA" }],
   creator: "DISKO PANDA",
   publisher: "DISKO PANDA",
@@ -21,14 +21,14 @@ export const metadata = {
     locale: "id_ID",
     url: "https://linkinbio-disko.vercel.app",
     siteName: "DISKO PANDA",
-    title: "DISKO PANDA — Dengarkan & Tonton",
-    description: "Link in bio band funk-disco DISKO PANDA dari Bandung: single baru, jadwal manggung, dan merch resmi.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "DISKO PANDA — Dengarkan & Tonton" }],
+    title: "Disko Panda — Band Funk-Disko dari Bandung",
+    description: "Tautan Disko Panda, band funk-disko dari Bandung: tur \"Panas Dingin\" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Disko Panda — Band Funk-Disko dari Bandung" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DISKO PANDA — Dengarkan & Tonton",
-    description: "Link in bio band funk-disco DISKO PANDA dari Bandung: single baru, jadwal manggung, dan merch resmi.",
+    title: "Disko Panda — Band Funk-Disko dari Bandung",
+    description: "Tautan Disko Panda, band funk-disko dari Bandung: tur \"Panas Dingin\" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
     images: ["/og.jpg"],
   },
   robots: {
