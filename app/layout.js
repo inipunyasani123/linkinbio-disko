@@ -4,10 +4,10 @@ import "./globals.css";
 const bungee = Bungee({ subsets: ["latin"], variable: "--font-bungee", weight: "400" });
 const spacemono = Space_Mono({ subsets: ["latin"], variable: "--font-spacemono", weight: ["400", "700"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"MusicGroup","name":"DISKO PANDA","genre":"Funk Disco","url":"https://linkinbio-disko.vercel.app"};
+const __jsonld = {"@context":"https://schema.org","@type":"MusicGroup","name":"DISKO PANDA","genre":"Funk Disco","url":"https://linkinbio-disko.pintuweb.id"};
 
 export const metadata = {
-  metadataBase: new URL("https://linkinbio-disko.vercel.app"),
+  metadataBase: new URL("https://linkinbio-disko.pintuweb.id"),
   title: { default: "Disko Panda — Band Funk-Disko dari Bandung", template: "%s — Disko Panda" },
   description: "Tautan Disko Panda, band funk-disko dari Bandung: tur \"Panas Dingin\" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
   applicationName: "DISKO PANDA",
@@ -15,11 +15,11 @@ export const metadata = {
   authors: [{ name: "DISKO PANDA" }],
   creator: "DISKO PANDA",
   publisher: "DISKO PANDA",
-  alternates: { canonical: "https://linkinbio-disko.vercel.app" },
+  alternates: { canonical: "https://linkinbio-disko.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://linkinbio-disko.vercel.app",
+    url: "https://linkinbio-disko.pintuweb.id",
     siteName: "DISKO PANDA",
     title: "Disko Panda — Band Funk-Disko dari Bandung",
     description: "Tautan Disko Panda, band funk-disko dari Bandung: tur \"Panas Dingin\" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
