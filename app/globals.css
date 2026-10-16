@@ -33,7 +33,23 @@ h1, h2, h3 { font-family: var(--font-display); }
 @keyframes wiggle { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
 .wiggle { animation: wiggle 3.5s ease-in-out infinite; }
 
-@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
-.rise { animation: rise 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+/* Masuk memakai properti translate (bukan transform) supaya efek hover .pop-hover tetap jalan. */
+@keyframes rise { from { opacity: 0; translate: 0 16px; } to { opacity: 1; translate: 0 0; } }
+.rise { animation: rise 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+/* Poster kepala jatuh pelan dari atas (memakai translate agar rotasi kelas tetap utuh). */
+@keyframes turun { from { opacity: 0; translate: 0 -14px; } to { opacity: 1; translate: 0 0; } }
+.turun { animation: turun 0.5s ease-out both; }
 
-:focus-visible { outline: 3px solid var(--color-magenta); outline-offset: 3px; }
+/* Cincin fokus tinta panda: kontras tinggi di atas semua warna pop. */
+:focus-visible { outline: 3px solid var(--color-panda); outline-offset: 3px; }
+
+/* Hormati pilihan "kurangi gerakan": konten langsung tampil, hiasan berhenti. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

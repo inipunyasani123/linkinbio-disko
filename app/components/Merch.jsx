@@ -1,9 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { MERCH, TUR, rp } from '@/lib/disko';
+import { MERCH, rp, tur } from '@/lib/disko';
+import useHariIni from './useHariIni';
 
-export default function Merch() {
+export default function Merch({ hari: awal }) {
+  const hari = useHariIni(awal);
+  const konser = tur(hari).find((t) => !t.lewat);
   const [ukuran, setUkuran] = useState('M');
   const [tas, setTas] = useState([]);
   const [ambil, setAmbil] = useState('kirim');
@@ -28,7 +31,7 @@ export default function Merch() {
                 <legend className="font-mono text-xs font-bold">Ukuran (stok)</legend>
                 <div className="mt-1 flex flex-wrap gap-1.5">
                   {Object.entries(m.ukuran).map(([u, n]) => (
-                    <label key={u} className={`pop cursor-pointer rounded-md px-2 py-1 font-mono text-xs font-bold has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-panda ${!n ? 'cursor-not-allowed bg-white/60 line-through' : ukuran === u ? 'bg-panda text-white' : 'bg-white'}`}>
+                    <label key={u} className={`pop inline-flex min-h-10 min-w-12 cursor-pointer items-center justify-center rounded-md px-2.5 font-mono text-xs font-bold has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-panda ${!n ? 'cursor-not-allowed bg-white/60 line-through' : ukuran === u ? 'bg-panda text-white' : 'bg-white'}`}>
                       <input type="radio" name="ukuran" value={u} disabled={!n} checked={ukuran === u} onChange={() => setUkuran(u)} className="sr-only" />
                       {u} <span className="font-normal">({n})</span>
                     </label>
@@ -37,7 +40,7 @@ export default function Merch() {
               </fieldset>
             ) : <p className="mt-3 font-mono text-xs font-bold">stok {m.stok}</p>}
             <div className="mt-auto pt-4">
-              <button type="button" onClick={() => { tambah(m); setSelesai(false); }} disabled={m.ukuran && !kaos.ukuran[ukuran]} className="pop w-full rounded-lg bg-white py-2 font-mono text-sm font-bold disabled:opacity-50">
+              <button type="button" onClick={() => { tambah(m); setSelesai(false); }} disabled={m.ukuran && !kaos.ukuran[ukuran]} className="pop min-h-11 w-full rounded-lg bg-white py-2 font-mono text-sm font-bold disabled:opacity-50">
               + Tas<span className="sr-only"> — {m.nama}</span>
               </button>
             </div>
@@ -51,7 +54,7 @@ export default function Merch() {
           <div role="status" className="mt-3 text-sm">
             <p className="text-kuning">Pesanan tercatat!</p>
             <p className="mt-1 text-krem/80">Ini purwarupa desain: tidak ada pembayaran atau pengiriman sungguhan.</p>
-            <button type="button" onClick={() => { setSelesai(false); setTas([]); }} className="pop mt-4 rounded-lg bg-kuning px-4 py-2 font-bold text-panda">Belanja lagi</button>
+            <button type="button" onClick={() => { setSelesai(false); setTas([]); }} className="pop mt-4 min-h-11 rounded-lg bg-kuning px-4 py-2 font-bold text-panda">Belanja lagi</button>
           </div>
         ) : tas.length ? (
           <>
@@ -59,14 +62,14 @@ export default function Merch() {
               {tas.map((x) => (
                 <li key={x.id} className="flex items-center justify-between gap-3">
                   <span>{x.nama}</span>
-                  <span className="flex items-center gap-3">{rp(x.harga)}<button type="button" onClick={() => hapus(x.id)} className="text-kuning underline" aria-label={`Hapus ${x.nama}`}>hapus</button></span>
+                  <span className="flex items-center gap-2">{rp(x.harga)}<button type="button" onClick={() => hapus(x.id)} className="min-h-10 px-2 text-kuning underline" aria-label={`Hapus ${x.nama}`}>hapus</button></span>
                 </li>
               ))}
             </ul>
             <fieldset className="mt-4 text-sm">
               <legend className="font-bold">Pengambilan</legend>
-              <label className="mt-1 flex items-center gap-2"><input type="radio" name="ambil" checked={ambil === 'kirim'} onChange={() => setAmbil('kirim')} /> Kirim ke rumah (+{rp(20000)})</label>
-              <label className="mt-1 flex items-center gap-2"><input type="radio" name="ambil" checked={ambil === 'konser'} onChange={() => setAmbil('konser')} /> Ambil di konser {TUR.find((t) => t.sisa)?.kota} (gratis)</label>
+              <label className="flex min-h-10 cursor-pointer items-center gap-2"><input type="radio" name="ambil" checked={ambil === 'kirim'} onChange={() => setAmbil('kirim')} className="h-4 w-4 accent-[#ff4fa3]" /> Kirim ke rumah (+{rp(20000)})</label>
+              <label className="flex min-h-10 cursor-pointer items-center gap-2"><input type="radio" name="ambil" checked={ambil === 'konser'} onChange={() => setAmbil('konser')} className="h-4 w-4 accent-[#ff4fa3]" /> Ambil di konser {konser.kota}, {konser.pendek} (gratis)</label>
             </fieldset>
             <p className="mt-4 flex justify-between border-t border-krem/20 pt-3 font-display text-xl text-white"><span>TOTAL</span><span aria-live="polite">{rp(subtotal + ongkir)}</span></p>
             <button type="button" onClick={() => setSelesai(true)} className="pop mt-4 w-full rounded-xl bg-magenta py-3 font-display text-lg text-panda">BAYAR</button>

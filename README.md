@@ -1,6 +1,6 @@
 # Disko Panda — Band Funk-Disko dari Bandung
 
-Tautan Disko Panda, band funk-disko dari Bandung: tur "Panas Dingin" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7", dan booking manggung.
+Tautan Disko Panda, band funk-disko dari Bandung: jadwal tur "Panas Dingin" di enam kota, beli tiket, merch resmi, vinyl 7", dan booking manggung.
 
 **Demo live:** https://linkinbio-disko.pintuweb.id
 
@@ -23,7 +23,7 @@ Persona Disko Panda, band funk. Poster gig bergaya Memphis: kartu berbingkai teb
 - Next.js 15.5 (App Router) dan React 19
 - Tailwind CSS v4
 - JavaScript
-- Framer Motion, Lucide (ikon)
+- Lucide (ikon); animasi dengan CSS
 - Font: Bungee, Space Mono (next/font)
 - SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
 

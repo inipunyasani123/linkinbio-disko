@@ -9,7 +9,7 @@ const __jsonld = {"@context":"https://schema.org","@type":"MusicGroup","name":"D
 export const metadata = {
   metadataBase: new URL("https://linkinbio-disko.pintuweb.id"),
   title: { default: "Disko Panda — Band Funk-Disko dari Bandung", template: "%s — Disko Panda" },
-  description: "Tautan Disko Panda, band funk-disko dari Bandung: tur \"Panas Dingin\" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
+  description: "Tautan Disko Panda, band funk-disko dari Bandung: jadwal tur \"Panas Dingin\" di enam kota, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
   applicationName: "DISKO PANDA",
   keywords: ["band funk bandung", "jadwal konser 2026", "merch band", "vinyl 7 inci", "link in bio band"],
   authors: [{ name: "DISKO PANDA" }],
@@ -22,13 +22,13 @@ export const metadata = {
     url: "https://linkinbio-disko.pintuweb.id",
     siteName: "DISKO PANDA",
     title: "Disko Panda — Band Funk-Disko dari Bandung",
-    description: "Tautan Disko Panda, band funk-disko dari Bandung: tur \"Panas Dingin\" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
+    description: "Tautan Disko Panda, band funk-disko dari Bandung: jadwal tur \"Panas Dingin\" di enam kota, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Disko Panda — Band Funk-Disko dari Bandung" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Disko Panda — Band Funk-Disko dari Bandung",
-    description: "Tautan Disko Panda, band funk-disko dari Bandung: tur \"Panas Dingin\" enam kota Oktober–Desember 2026, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
+    description: "Tautan Disko Panda, band funk-disko dari Bandung: jadwal tur \"Panas Dingin\" di enam kota, beli tiket, merch resmi, vinyl 7\", dan booking manggung.",
     images: ["/og.jpg"],
   },
   robots: {
