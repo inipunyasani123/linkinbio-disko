@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Gambar from './components/Gambar';
 import { Disc3, Flame, Mic2, ShoppingBag, Ticket } from 'lucide-react';
 import { LINKS, SINGLE } from '@/lib/disko';
 import { hariIniWIB } from '@/lib/waktu';
@@ -18,17 +19,23 @@ export default function Home() {
       <svg className="absolute left-1/2 top-6 -translate-x-1/2" width="120" height="16" aria-hidden="true"><polyline points="0,12 15,4 30,12 45,4 60,12 75,4 90,12 105,4 120,12" fill="none" stroke="#ff4fa3" strokeWidth="4" /></svg>
 
       <div className="relative z-10 w-full max-w-md lg:max-w-3xl">
-        <header className="turun pop -rotate-2 rounded-2xl bg-panda p-6 text-center text-krem lg:p-9">
+        <header className="turun pop -rotate-2 rounded-2xl bg-panda p-6 text-center text-krem lg:grid lg:grid-cols-[15rem_minmax(0,1fr)] lg:items-center lg:gap-8 lg:p-9 lg:text-left">
+          <Gambar src="/images/maskot-panda.webp" alt="Maskot Disko Panda: panda berkacamata magenta berpose disko di depan matahari kuning dan bola disko" width={176} height={176} priority className="mx-auto -mt-2 mb-2 h-44 w-44 lg:m-0 lg:h-60 lg:w-60" />
+          <div>
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-kuning">🕺 Funk · Disco · Bandung</p>
           <h1 className="mt-2 font-display text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
             DISKO<span className="text-magenta">PANDA</span>
           </h1>
-          <div className="eq mt-3 flex h-8 items-end justify-center gap-1.5" aria-hidden="true">
+          <div className="eq mt-3 flex h-8 items-end justify-center gap-1.5 lg:justify-start" aria-hidden="true">
             {BARS.map((s, i) => (
               <span key={i} style={{ height: `${s * 20}px`, background: ['#ff4fa3', '#ffc933', '#3b82f6', '#22c55e'][i % 4], animation: `eq ${0.7 + (i % 3) * 0.2}s ease-in-out ${i * 0.1}s infinite` }} />
             ))}
           </div>
-          <p className="mt-3 font-mono text-xs text-krem/85">Single terbaru &ldquo;{SINGLE.judul}&rdquo; ({SINGLE.durasi}) — sudah ada di semua platform musik.</p>
+          <p className="mt-4 flex items-center justify-center gap-3 text-left font-mono text-xs text-krem/85 lg:justify-start">
+            <Gambar src="/images/sampul-goyang-kota.webp" alt={`Sampul single ${SINGLE.judul}`} width={48} height={48} loading="eager" className="h-12 w-12 shrink-0 rounded border-2 border-krem" />
+            <span>Single terbaru &ldquo;{SINGLE.judul}&rdquo; ({SINGLE.durasi}) — sudah ada di semua platform musik.</span>
+          </p>
+          </div>
         </header>
 
         <nav className="mt-7 space-y-4 lg:mt-9 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0 lg:[&>*:last-child:nth-child(odd)]:col-span-2" aria-label="Tautan band">
