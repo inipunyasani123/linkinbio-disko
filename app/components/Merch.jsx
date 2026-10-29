@@ -23,7 +23,7 @@ export default function Merch({ hari: awal }) {
       <ul className="mt-8 grid gap-5 sm:grid-cols-2">
         {MERCH.map((m, i) => (
           <li key={m.id} id={m.id} className={`pop flex scroll-mt-6 flex-col rounded-2xl p-5 ${m.bg} ${i % 2 ? 'rotate-[0.6deg]' : '-rotate-[0.6deg]'}`}>
-            <Gambar src={m.gambar} alt={m.alt} width={176} height={176} className={`mx-auto h-44 w-44 ${m.foto ? 'rounded-full border-[3px] border-panda' : ''}`} />
+            <Gambar src={m.gambar} alt={m.alt} width={176} height={176} className={`mx-auto h-44 w-44 ${m.bulat ? 'rounded-full border-[3px] border-panda' : ''}`} />
             <h2 className="mt-2 font-display text-lg leading-tight">{m.nama}</h2>
             <p className="font-mono text-lg font-bold">{rp(m.harga)}</p>
             {m.catatan && <p className="mt-1 font-mono text-xs">{m.catatan}</p>}
